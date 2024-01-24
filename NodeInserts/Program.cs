@@ -5,6 +5,14 @@ namespace NodeInserts
 {
     internal class Program
     {
+        public static Node<char> NewNodeWithChar(Node<TavimAndNum> lst)
+        {
+            if (lst == null)
+                return null;
+            Node<char> finale = new Node<char>(lst.GetValue().GetTav());
+
+        }
+
         static void Main(string[] args)
         {
             Node<ShabatRecievers> shabatShalom = new Node<ShabatRecievers>(new ShabatRecievers("Shiri","Shira",18,1,2024));
