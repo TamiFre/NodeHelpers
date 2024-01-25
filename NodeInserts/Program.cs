@@ -5,12 +5,37 @@ namespace NodeInserts
 {
     internal class Program
     {
-        public static Node<char> NewNodeWithChar(Node<TavimAndNum> lst)
+        //שאלה 48
+        public static int NumCanPutDominoTogether(Dominos dmn, Node<Dominos> lst)
         {
-            if (lst == null)
-                return null;
-            Node<char> finale = new Node<char>(lst.GetValue().GetTav());
+            Dominos s = lst.GetValue();
+            int counter = 0;
+            while (lst != null)
+            {
+                if (s.IsExists(dmn.GetSecondStone())|| s.IsExists(dmn.GetFirstStone()))
+                    counter++;
+                lst = lst.GetNext();
+            }
+            return counter;
+        }
 
+
+        //שאלה 50
+        public static string NameOfWinner(Node<Partici> lst)
+        {
+            Partici p = lst.GetValue();
+            string nameWinner = "";
+            double max = -1;
+            while(lst!=null)
+            {
+                if (p.DowmInPrecent() > max)
+                {
+                    max = p.DowmInPrecent();
+                    nameWinner = p.GetName();   
+                }
+                lst = lst.GetNext();
+            }
+            return nameWinner;
         }
 
         static void Main(string[] args)
