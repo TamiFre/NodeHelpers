@@ -38,6 +38,22 @@ namespace NodeInserts
             return nameWinner;
         }
 
+        //שאלה 57 
+        //א
+        public static void PrintAverage(Node<Students> s)
+        {
+            Students n = s.GetValue();  
+            if (s==null)
+                return;
+            while (s != null)
+            {
+                Console.WriteLine($"{n.Average()}+{n.GetName()}");
+                s = s.GetNext();
+            }
+        }
+
+        public static int IDSubject()
+
         static void Main(string[] args)
         {
             Node<ShabatRecievers> shabatShalom = new Node<ShabatRecievers>(new ShabatRecievers("Shiri","Shira",18,1,2024));
