@@ -52,7 +52,25 @@ namespace NodeInserts
             }
         }
 
-        public static int IDSubject()
+
+
+        //123 תרגיל 59
+        //includes Bus.cs and all the other classes there
+        public static int Cheapest(CityBusses cb, Station first, Station destination)
+        {
+            int totalEnd = -1;
+            Node<Bus> dummy = cb.GetList();
+            while (dummy != null)
+            {
+                
+            }
+        }
+
+
+
+
+
+    
 
         static void Main(string[] args)
         {
